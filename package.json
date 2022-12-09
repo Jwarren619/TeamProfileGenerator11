@@ -1,6 +1,26 @@
+
 {
-  "dependencies": {
-    "inquirer": "^8.2.4",
-    "jest": "^29.3.1"
-  }
+  "name": "13-Ins-Pass-Tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "fizz.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^26.5.2"
+  },
+  
+  
+    "dependencies": {
+      "inquirer": "^8.2.4",
+      "jest": "^29.3.1"
+    }
+  
 }
