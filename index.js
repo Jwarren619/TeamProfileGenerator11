@@ -3,6 +3,16 @@ const jest = require('jest');
 const path = require('path');
 const fs = require('fs');
 
+const Engineer = require('./lib/Engineer');
+const Intern = require('./lib/Intern');
+const Manager = require('./lib/Manager');
+
+const DIST_DIR = path.resolve(__dirname, 'Dist');
+const outputPathHTML = path.join(DIST_DIR, 'index.html');
+const outputPathCSS = path.join(DIST_DIR, 'style.css');
+const renderFilesHTML = require('./mysrc/style');
+const renderFilesCSS = require('./mysrc/index');
+
 function addIntern() {
     inquirer
         .prompt([
@@ -43,27 +53,11 @@ function generateCSS() {
     fs.writeFileSync(outputPathCSS, renderFilesCSS())
 }
 
-addManager();
-
-const path = require('path');
-const fs = require('fs');
-
-
-const Engineer = require('./lib/Engineer');
-const Intern = require('./lib/Intern');
-const Manager = require('./lib/Manager');
-
-const DIST_DIR = path.resolve(__dirname, 'dist');
-const outputPathHTML = path.join(DIST_DIR, 'index.html');
-const outputPathCSS = path.join(DIST_DIR, 'style.css');
-const renderFilesHTML = require('./src/HTML/helperCodeHTML');
-const renderFilesCSS = require('./src/CSS/helperCodeCSS');
-
 const teamArr = [];
 
 function init() {            
     function addManager() {
-        console.log("Let's start building your team!");
+        console.log("Let's start creating your team!");
         inquirer
             .prompt([
                 {
@@ -149,7 +143,7 @@ function init() {
                         [
                             'Engineer',
                             'Intern',
-                            'No, my team is complete',
+                            'No, everything is done',
                         ],
                     name: 'newRole'
                 }

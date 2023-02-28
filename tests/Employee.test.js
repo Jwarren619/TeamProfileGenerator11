@@ -2,9 +2,9 @@ const Employee = require('../lib/Employee');
 
 describe("Employee", () => {
     it("should create employee object", () => {
-        const testName = "Lewis";
-        const testId = 8;
-        const testEmail = "Lewis@aol.com"
+        const testName = "Jeremiah";
+        const testId = 234;
+        const testEmail = "jeremiah@fakeemail.com"
         const newEmployee = new Employee (
             testName, testId, testEmail
         )

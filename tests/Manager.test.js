@@ -4,13 +4,13 @@ describe("Manager", () => {
     it("should ceate the manager object", () => {
         const testName = "Lewis";
         const testId = 8;
-        const testEmail = "Lewis@aol.com";
+        const testEmail = "lewisfake@email.com";
         const testOfficeNumber = 126.262
         const newManager = new Manager (
-            testName, testId, testEmail, officeNumber
+            testName, testId, testEmail, testOfficeNumber
         )
         const testOfficeNumberMethod = newManager.getOfficeNumber()
-        expect(testOfficeNumberMethod).toequal(testOfficeNumber)
+        expect(testOfficeNumberMethod).toEqual(testOfficeNumber)
     })
   
 })
